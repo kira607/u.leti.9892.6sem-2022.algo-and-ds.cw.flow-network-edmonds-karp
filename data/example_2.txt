@@ -1,0 +1,16 @@
+S A 8
+S B 5
+S C 3
+A B 6
+A C 4
+A D 5
+B C 5
+B E 3
+B F 5
+C D 5
+C E 4
+D E 5
+D T 3
+E T 8
+F E 3
+F T 9
