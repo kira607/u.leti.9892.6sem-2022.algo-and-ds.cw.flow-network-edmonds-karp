@@ -8,7 +8,7 @@ def run_example(i: int) -> None:
     print(f'Пример {i}:')
     print(f'{graph.max_flow=}')
     print('=' * 50)
-    export_flow_network(graph, 'data', name)
+    export_flow_network(graph, f'report/photo/', f'example_graph_{i}')
 
 
 def main():

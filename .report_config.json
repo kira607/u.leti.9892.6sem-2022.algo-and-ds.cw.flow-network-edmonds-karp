@@ -1,0 +1,19 @@
+{
+    "template": "full_template",
+    "department": "САПР",
+    "label": "КУРСОВАЯ РАБОТА",
+    "num": null,
+    "discipline": "Алгоритмы и структуры данных",
+    "theme": "Потоки в сетях. Вариант 2",
+    "student": "",
+    "partners": [],
+    "teacher": "Тутуева А.В.",
+    "year": "2022",
+    "chapters": {
+        "algo": "Описание алгоритма и стуктур данных",
+        "complexity": "Оценка временной сложности",
+        "example": "Примеры работы",
+        "listing": "Листинг"
+    },
+    "newpage": false
+}

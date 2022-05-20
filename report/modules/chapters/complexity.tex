@@ -1,0 +1,37 @@
+\section{Оценка временной сложности}
+
+Оценка временной сложности методов класса FlowNetwork
+представлена в таблице \ref{tab:complexity}.
+
+Здесь 
+$ E $ -- количество рёбер в графе, 
+$ V $ -- количество вершин.
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|l|l|}
+        \hline
+        Метод & Оценка временной сложности \\
+        \hline
+        \verb|vertex| & $ O(1) $ \\
+        \hline
+        \verb|edge| & $ O(1) $ \\
+        \hline
+        \verb|vertices| & $ O(1) $ \\
+        \hline
+        \verb|edges| & $ O(|E|) $ \\
+        \hline
+        \verb|add_vertex| & $ O(1) $ \\
+        \hline
+        \verb|add_edge| & $ O(1) $ \\
+        \hline
+        \verb|_get_max_flow| & $ O(|V| \times |E|^2) $ \\
+        \hline
+        \verb|_get_augmenting_path| & $ O(|E|) $ \\
+        \hline
+        \verb|_get_residual_capacity| & $ O(1) $ \\
+        \hline
+    \end{tabular}
+    \caption{Оценка временной сложности методов класса FlowNetwork}
+    \label{tab:complexity}
+\end{table}
