@@ -16,10 +16,6 @@ class Edge:
         return f'<{self.__class__.__name__} ({self.v1.name}, {self.v2.name}) ({self.flow}/{self._capacity})>'
 
     @property
-    def residual_capacity(self) -> int:
-        return self._capacity - self.flow
-
-    @property
     def flow(self) -> int:
         return self._flow
 
@@ -27,6 +23,10 @@ class Edge:
     def flow(self, value: int):
         self._flow = value
         self._test_flow()
+
+    @property
+    def residual_capacity(self) -> int:
+        return self._capacity - self._flow
 
     def get_dot_string(self) -> str:
         src = f'"{self.v1.name}"'

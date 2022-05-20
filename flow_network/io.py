@@ -20,5 +20,5 @@ def load_flow_network(path: str):
 
 
 def export_flow_network(fn: FlowNetwork, path: str, name: str = 'graph') -> None:
-    file_path = os.path.join(path, f'{name}.dot')
-    graphviz.Source(fn.get_dot_string()).render(file_path)
+    file_path = os.path.join(path, f'{name}')
+    graphviz.Source(fn.get_dot_string()).render(file_path, format='png', cleanup=True)

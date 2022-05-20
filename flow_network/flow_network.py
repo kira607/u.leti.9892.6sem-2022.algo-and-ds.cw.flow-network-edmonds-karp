@@ -95,8 +95,7 @@ class FlowNetwork:
         while queue:
             u = queue.pop(0)
             for v in self.vertices():
-                rc = self._get_residual_capacity(u.name, v.name)
-                edge = self.edge(u.name, v.name, None)
+                rc, edge = self._get_residual_capacity(u.name, v.name)
                 if not (rc and edge):
                     continue
                 if rc > 0 and v not in paths:
@@ -109,8 +108,8 @@ class FlowNetwork:
     def _get_residual_capacity(self, v1: str, v2: str) -> Optional[int]:
         edge = self.edge(v1, v2, None)
         if edge:
-            return edge.residual_capacity
+            return edge.residual_capacity, edge
         edge = self.edge(v2, v1, None)
         if edge:
-            return -edge.residual_capacity
-        return None
+            return -edge.residual_capacity, edge
+        return None, None
